@@ -3,16 +3,22 @@ import  {Component} from '@angular/core';
 
 @Component({
     selector: 'mi-componente',
-    template:`
-            <h1> Hola Mundo, soy MI COMPONENTE</h1>
-             <p> Este es mi componente</p>
-            `
+    templateUrl:'mi-componente.component.html'
 
             })
 
 export class Micomponente{
+    public titulo: String;
+    public comentario: string;
+    public year: number;
+    
+
     constructor(){
-    console.log("Componente mi componente Cargado");
+        this.titulo="Hola Mundo ";
+        this.comentario="Hola Mundo"
+        this.year=2021;
+        console.log("Componente mi componente Cargado");
+        console.log(this.comentario,this.titulo,this.year);
         
     }
 }
